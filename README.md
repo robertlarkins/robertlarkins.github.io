@@ -23,7 +23,7 @@ The following instructions outline how to create a GitHub pages site for a user:
 1. Browse to https://robertlarkins.github.io to see the hosted site. At present, this will only display the contents of README.md.
 
 
-# Add a GitHub Pages Theme
+# Add a GitHub Supported Pages Theme
 
 GitHub has themes that it directly supports. A theme can be added to the GitHub page by doing the following:
 1. Add a `_config.yml` file to the repo root with the following contents:
@@ -70,19 +70,24 @@ To get the GitHub Pages site hosted locally, do the following ([based on these i
 1. Run the command `bundle exec jekyll serve` to start the webhost.
 1. Browse to `http://127.0.0.1:4000/`.
 
+To get a more extensive setup, follow the instructions here: https://jekyllrb.com/docs/.
+
 
 ### Notes
 
 - What is `group:`? [Reading this page](https://jekyllrb.com/docs/plugins/installation/#the-jekyll_plugins-group) it seems that the line `gem "github-pages", group: :jekyll_plugins` seems to include `github-pages` as part of the `jekyll_plugins` group.
 
 - The CLI command `bundle add <gem>` will add the given Gem to the Gemfile. Adding the `-v` flag allows a version to be specified. The following [version constraints](https://guides.rubygems.org/patterns/#pessimistic-version-constraint) can also be added:
-  - `~>` - pessimistic operator (aka twiddle-wakka).
-  - `!=` - not equal to
-  - `<` - less than
-  - `<=` - less than or equal to
-  - `=` - equal to
-  - `>=` - greater than or equal
-  - `>` - greater than
+
+| Operator | Description |
+| :---:    | :---        |
+|   `~>`   | Pessimistic operator (aka twiddle-wakka). |
+|   `!=`   | Not equal to. |
+|   `<`    | Less than. |
+|   `<=`   | Less than or equal to. |
+|   `=`    | Equal to. |
+|   `>=`   | Greater than or equal. |
+|   `>`    | Greater than. |
 
 Some examples:
 
@@ -92,6 +97,95 @@ Some examples:
 | `bundle add jekyll -v "= 3.10.0"` | `gem "jekyll", "= 3.10.0"` | Explicit version. |
 | `bundle add jekyll -v '~> 3.10.0'` | `gem "jekyll", "~> 3.10.0"` | Any patch version of 3.10. |
 | `bundle add jekyll -v '> 3.9.0, <= 3.10.0'` | `gem "jekyll", "> 3.9.0", "<= 3.10.0"` | Any version greater than version 3.9 and less than or equal to version 3.10. |
+
+
+# Add Posts
+
+https://jekyllrb.com/docs/posts/
+
+
+
+# Add a Jekyll Theme
+
+While GitHub Pages has supported themes, there are many other Jekyll themes that have been created and available for use.
+
+What I'm interested in is a Jekyll theme that supports blog posts. The [Jekyll website links to different theme sites](https://jekyllrb.com/docs/themes/#pick-up-a-theme). There are different ways themes can be added:
+- Set using `remote_theme`
+- Add as a Ruby Gem
+- Forking or directly copying all of the theme files into the project. While this approach allows more specific changes, it will not be explored as it is more difficult to update or change the theme.
+
+Both adding as a Ruby Gem or using `remote_theme` approaches allow local overwrites to parts of the theme via the config and other files.
+
+Using a gem would allow us to pin a particular version, so any changes to the remote-theme will not change our blog. The remote-theme option is specific to GitHub Pages and will keep the blog aligned with the latest version of the remote-theme.
+
+Reference: https://www.richard-stanton.com/2023/01/20/github-pages-remote-theme.html
+
+
+## Via `remote_theme`
+
+To use the `remote_theme` setting, go to `_config.yml` and replace the `theme` setting with `remote_theme`. It will look like this:
+
+```yaml
+remote_theme: OWNER/REPO
+```
+
+Where the `OWNER/REPO` value is the path to the theme in GitHub. For example, the `minima` theme is found at https://github.com/jekyll/minima, so the value is:
+
+```yaml
+remote_theme: jekyll/minima
+```
+
+Note: The [jekyll-remote-theme plugin](https://github.com/benbalter/jekyll-remote-theme) comes bundled with the github-pages gem. Therefore, it does not need to be added separately.
+
+
+### Specific Version
+
+Referencing the theme as `OWNER/REPO` will use its latest version. [A specific version can be set](https://github.com/benbalter/jekyll-remote-theme?tab=readme-ov-file#declaring-your-theme)) by appending `@<git_ref>`, where `<git_ref>` is one of the following approaches:
+
+| Approach | Example | Notes |
+| :---     | :---    | :---  |
+| Tag (version) | `jekyll/minima@v1.2.0` | |
+| Branch   | `jekyll/minima@minima-next` | `minima-next` is the branch name. |
+| Commit   | `jekyll/minima@9350a3b` | This example uses a short git commit hash (usually the first 7 characters of the full hash). The full git commit hash can be used. |
+
+  
+
+remote_theme is specified as a config option here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll#adding-a-theme
+remote_theme plugin: https://github.com/benbalter/jekyll-remote-theme#declaring-your-theme
+
+
+## Via Ruby Gem
+
+A theme not supported by GitHub pages can still be set using the `theme` setting in `_config.yml`. The theme just needs to be added Gemfile:
+
+```yml
+gem "THEME-GEM"
+```
+
+An example would be the `minima` theme. In `_config.yml` it would be:
+
+```yml
+theme: minima
+```
+
+while the gem would be set in `Gemfile` as:
+
+```yml
+gem "minima"
+```
+
+As it is a gem, a specific version can be set using the RubyGems version specifier syntax.
+
+The name of a theme and its gem are usually found in the theme's README.md or associated documentation.
+
+https://jekyll-themes.com/riggraz/no-style-please
+
+Note: Unknown yet if this approach will work for github pages.
+
+
+# GitHub Actions
+
+https://github.com/just-the-docs/just-the-docs/issues/1273#issuecomment-1594089958
 
 
 # Future

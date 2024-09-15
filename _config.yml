@@ -1,3 +1,9 @@
-theme: jekyll-theme-minimal
+layout: post
+# theme: minima
+remote_theme: pages-themes/minimal@v0.2.0
 title: Robert's homepage
 description: A blogging website?
+# plugins:
+# - jekyll-remote-theme # add this line to the plugins list if you already have one
+# title: [The title of your site]
+# description: [A short description of your site's purpose]
