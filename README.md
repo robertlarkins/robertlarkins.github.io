@@ -137,6 +137,7 @@ remote_theme: jekyll/minima
 
 Note: The [jekyll-remote-theme plugin](https://github.com/benbalter/jekyll-remote-theme) comes bundled with the github-pages gem. Therefore, it does not need to be added separately.
 
+This approach points to the theme in GitHub.
 
 ### Specific Version
 
@@ -152,6 +153,8 @@ Referencing the theme as `OWNER/REPO` will use its latest version. [A specific v
 
 remote_theme is specified as a config option here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/adding-a-theme-to-your-github-pages-site-using-jekyll#adding-a-theme
 remote_theme plugin: https://github.com/benbalter/jekyll-remote-theme#declaring-your-theme
+
+This approach points to the theme Gem, which might not be as up-to-date as the GitHub repo.
 
 
 ## Via Ruby Gem
