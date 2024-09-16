@@ -1,6 +1,6 @@
 layout: post
 # theme: minima
-remote_theme: pages-themes/minimal@v0.2.0
+remote_theme: jekyll/minima
 title: Robert's homepage
 description: A blogging website?
 # plugins:
