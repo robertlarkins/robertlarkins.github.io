@@ -2,17 +2,16 @@
 layout: post
 title: "Setting up GitHub Pages"
 date: 2024-09-18
-categories: [jekyll, 'github pages']
+categories: ['jekyll', 'github pages']
 tag: [setup]
 ---
 
-# Setting up GitHub Pages
 
 [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages) is a hosting service that hosts a website directly from a GitHub repository. GitHub Pages has three types of sites:
 - **project** - site for a specific project (repo)
 - **user** - site for a user account
 - **organisation** - site for an organisation account
-Jekyll is used for implementing these sites, which simplifies their setup. This post provides the steps for setting up a user (or organisation) site.
+Jekyll is used for implementing these sites, which simplifies their setup. This guide shows how to set up a user (or organisation) site.
 
 
 ## Create the Repo
