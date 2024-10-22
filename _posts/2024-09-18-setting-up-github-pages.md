@@ -17,11 +17,11 @@ Jekyll is used for implementing these sites, which simplifies their setup. This 
 ## Create the Repo
 
 A user site has its own repo. So do the following to [create and initialise the repo](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-a-repository-for-your-site):
-1. Create a new repo named *<your-account-name>.github.io*.
-   1. Make the repo public.
-   1. Initialise with a README.md.
+1. Create a new repo named *&lt;your-account-name>.github.io*.
+   1. Make the repo **Public**.
+   1. Initialise with a **README.md**.
 1. Select the branch to publish from ([alternative instructions](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch)):
-   1. Go to the Repo's **Settings**
+   1. Go to the Repo's **Settings**.
    1. Go to **Code and automation > Pages** in the side menu.
    1. Set the **Build and deployment** branch to *main* and the folder to *root*.
 1. Clone the repo to your local.
@@ -31,7 +31,7 @@ A user site has its own repo. So do the following to [create and initialise the 
    - jekyll
    - rails
 1. Commit the changes.
-1. Browse to https://&lt;your-account-name>.github.io to see the hosted site (It website may take few minutes to update). At present, this will only display the contents of README.md.
+1. Browse to https://&lt;your-account-name>.github.io to see the hosted site (it may take few minutes to update). At present, this will only display the contents of README.md.
 
 
 # Add a GitHub Supported Pages Theme
@@ -40,8 +40,8 @@ GitHub has themes that it directly supports. A theme can be added to the GitHub 
 1. Add a `_config.yml` file to the repo root with the following contents:
    ```yml
    theme: jekyll-theme-minimal
-   title: Robert's homepage
-   description: A blogging website?
+   title: Your New Homepage
+   description: A place to blog
    ```
 1. Commit changes.
 1. Reload https://&lt;your-account-name>.github.io to see the hosted site with the theme.
