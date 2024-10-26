@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Add Jekyll Theme"
-date: 2024-09-17 7:30:00 +1200
+date: 2024-10-27
 categories: ['jekyll']
 tags: ['theme', 'GitHub Pages']
 ---
