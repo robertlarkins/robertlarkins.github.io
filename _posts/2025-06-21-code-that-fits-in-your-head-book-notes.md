@@ -40,3 +40,5 @@ Follow the Boy Scout Rule: *leave the code in a better stat that you found it*.
 
 Treat warnings as errors and then do not bypass. The code wont compile. This is a technical decision which you as a technical expert make. How you convey this decision is a moral judgement, which may depend on your organisation (healthy vs unhealthy culture), but:
 > Providing technical expertise includes *not* confusing stakeholders with details they can't make sense of or use.
+
+Organisation hacking - enforce requirements via code, then can say it is a technical requirement that must be met, rather than trying to convince others it is needed.
