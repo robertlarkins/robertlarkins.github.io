@@ -42,3 +42,29 @@ Treat warnings as errors and then do not bypass. The code wont compile. This is 
 > Providing technical expertise includes *not* confusing stakeholders with details they can't make sense of or use.
 
 Organisation hacking - enforce requirements via code, then can say it is a technical requirement that must be met, rather than trying to convince others it is needed.
+
+
+# Chapter 5 - Encapsulation
+
+Encapsulation is a contract for an object stipulating that it will behave reasonably
+- contract that describes valid interactions between objects and callers
+
+Minimise the time that code is in a state of not working - move in small increments
+
+parameterised tests - Add additional test cases to 'drive' the change
+
+Prefer exceptions that give more info
+
+Have positive and negative tests
+
+Red Green Refactor + TDD - one of the most 'scientific methodologies' of software engineering
+
+Refactoring - improving the internal structure without altering the external behaviour - all tests should still pass
+
+The 'art' of software engineering - 'the shifting sands of individual experience'
+
+Design by Contract
+Don't need to know implementation details, allows thinking of the object more abstractly - the contract is the essential quality of an object
+Design explicitely by considering what is and is not valid input. And what guarantees you can give about output.
+
+A domain model is an attempt to describe the 'real world'. Natural numbers (>=1) are everywhere.
