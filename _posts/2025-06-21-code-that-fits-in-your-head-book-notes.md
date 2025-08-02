@@ -46,20 +46,32 @@ Organisation hacking - enforce requirements via code, then can say it is a techn
 
 # Chapter 5 - Encapsulation
 
-Encapsulation is a contract for an object stipulating that it will behave reasonably
-- contract that describes valid interactions between objects and callers
+## Design
 
-Minimise the time that code is in a state of not working - move in small increments
+- Encapsulation is a contract for an object stipulating that it will behave reasonably
+  - Contract that describes valid interactions between objects and callers
+  - The object guarantees it will always be in a valid state.
+- Minimise the time that code is in a state of not working - move in small increments
 
-parameterised tests - Add additional test cases to 'drive' the change
 
-Prefer exceptions that give more info
+## Testing
 
-Have positive and negative tests
+- Parameterised tests - Add additional test cases to 'drive' the change
+- Have positive and negative tests
 
-Red Green Refactor + TDD - one of the most 'scientific methodologies' of software engineering
 
-Refactoring - improving the internal structure without altering the external behaviour - all tests should still pass
+## Red Green Refactor + TDD
+
+- One of the most 'scientific methodologies' of software engineering
+
+
+## Coding
+
+- Prefer exceptions that give more info
+- Refactoring - improving the internal structure without altering the external behaviour - all tests should still pass
+ 
+
+## Notes
 
 The 'art' of software engineering - 'the shifting sands of individual experience'
 
@@ -68,3 +80,15 @@ Don't need to know implementation details, allows thinking of the object more ab
 Design explicitely by considering what is and is not valid input. And what guarantees you can give about output.
 
 A domain model is an attempt to describe the 'real world'. Natural numbers (>=1) are everywhere.
+
+Postel's Law - Be conservative in what you send, be liberal in what you accept.
+- Be specific in what output you provide.
+- The more broad the input can be, the easier the caller can interact with the object. But only allow input you can meaningfully work with.
+
+Cyclomatic Complexity - the number of independant paths through a piece of code.
+
+Domain Models should be 'Always Valid'. Encapsulation should guarantee that an object is always in a valid state. Immutable objects mean you only need to consider validity at the constructor - the object can't be mutated.
+
+Preconditions describe the responsibilities of the caller (eg: input items can't be null, though the domain model should enforce this. Postconditions describe the guaratees given by the object. These pre and post conditions are defined by the contract. These form invariants - conditions about the model that be true.
+
+Don't assert on exception messages. The exception message isn't part of an object's behaviour, it is a form of implementation detail. Also, don't repeat yourself (DRY).
