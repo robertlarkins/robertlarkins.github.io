@@ -82,7 +82,7 @@ Design explicitely by considering what is and is not valid input. And what guara
 A domain model is an attempt to describe the 'real world'. Natural numbers (>=1) are everywhere.
 
 Postel's Law - Be conservative in what you send, be liberal in what you accept.
-- Be specific in what output you provide.
+- Be specific in what output you provide. The more guaratees given, the less defensive code the caller has to write.
 - The more broad the input can be, the easier the caller can interact with the object. But only allow input you can meaningfully work with.
 
 Cyclomatic Complexity - the number of independant paths through a piece of code.
