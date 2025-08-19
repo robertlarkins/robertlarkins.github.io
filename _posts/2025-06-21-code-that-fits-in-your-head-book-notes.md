@@ -92,3 +92,17 @@ Domain Models should be 'Always Valid'. Encapsulation should guarantee that an o
 Preconditions describe the responsibilities of the caller (eg: input items can't be null, though the domain model should enforce this. Postconditions describe the guaratees given by the object. These pre and post conditions are defined by the contract. These form invariants - conditions about the model that be true.
 
 Don't assert on exception messages. The exception message isn't part of an object's behaviour, it is a form of implementation detail. Also, don't repeat yourself (DRY). Though, the exception message confirms the exception is being thrown the expected part of the code, and isn't actually a different exception.
+
+
+# Chapter 6
+
+Working with legacy code is hard:
+- It take time to learn the code base
+- Change is hard
+
+Develop sustainable cade that fits in your brain.
+
+Zen of python: _Explicit is better than implicit_
+
+Perfect is the enemy of good
+
