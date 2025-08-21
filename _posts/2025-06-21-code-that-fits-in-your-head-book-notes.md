@@ -100,10 +100,11 @@ Working with legacy code is hard:
 - It take time to learn the code base
 - Change is hard
 
-Develop sustainable cade that fits in your brain.
+Develop sustainable code that fits in your brain.
 
 What HTTP status to return for an unsuccessful POST?
 
+Code (both tests and production code) should be explicit:
 Zen of python: _Explicit is better than implicit_
 
 Perfect is the enemy of good
