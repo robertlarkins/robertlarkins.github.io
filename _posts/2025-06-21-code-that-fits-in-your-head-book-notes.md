@@ -102,7 +102,23 @@ Working with legacy code is hard:
 
 Develop sustainable cade that fits in your brain.
 
+What HTTP status to return for an unsuccessful POST?
+
 Zen of python: _Explicit is better than implicit_
 
 Perfect is the enemy of good
 
+Triangulation process:
+> _As the tests get more specific, the code gets more generic._
+> Robert C. Martin
+
+In TDD, the first test case is passed by applying the simplest logic, which is returning for the exact case passed in (Devil's Advocate technique). The second (and subsequent) test cases drives the implementation towards a more general solution.
+Devil's Advocate technique is in its simplicity to try and pass all tests with an obviously bad implementation. Adding further tests forces a better implementation. Add more test cases till the Devil is defeated. Remember to apply Red-Green-Refactor to simplify the code.
+
+arrange number expression from smallest on the left. eg: `min <= myValue && myValue <= max`. This makes the expression better match the number line, improving readability. (Therefore `<` or `<=` will be used predominantly).
+
+Repository classes aren't tested directly.
+
+When are there enough tests? There isn't a quantitative answer. Add enough tests for the situation to give confidence that the code doesn't contain mistakes. If a defect (error, issue, bug, etc.) occurs, add a test that reproduces the defect. If it happens in production, it could happen again. Prevent a regression reoccurring with a test. This is risk assessment, weight the adverse outcome with its impact.
+
+The more tests there are, the better the System Under Test is described. Using Devil's Advocate and Red-Green-Refactor helps give good test coverage while minimising redundant test cases.
