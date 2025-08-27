@@ -123,3 +123,46 @@ Repository classes aren't tested directly.
 When are there enough tests? There isn't a quantitative answer. Add enough tests for the situation to give confidence that the code doesn't contain mistakes. If a defect (error, issue, bug, etc.) occurs, add a test that reproduces the defect. If it happens in production, it could happen again. Prevent a regression reoccurring with a test. This is risk assessment, weight the adverse outcome with its impact.
 
 The more tests there are, the better the System Under Test is described. Using Devil's Advocate and Red-Green-Refactor helps give good test coverage while minimising redundant test cases.
+
+
+# Chapter 7 - Decomposition
+
+Code bases gradually deteriorate.
+
+Code Rot - If overall code quality is ignored, then the code base becomes more complicated. When it becomes complicated enough people notice, a legacy code base has formed.
+
+Keep cyclomatic complexity below a threshold. Enforce this using an automatic rule. Seven is a good threshold (based on the brain's working memory capacity). But when needed rules can be broken (for a time). The goal is awareness.
+
+Lines of code is th emost pragmatic predictor of complexity.
+
+Cyclomatic complexity - number of pathways through a piece of code.
+
+## 80/24 rule
+Recommended max lines in method should be ~24.
+Write small method to improve readability - code that fits in your brain.
+
+maximum line width of 80 characters.
+
+VT100 terminal is 80x24 characters. This is an arbitrary guide.
+
+Consider refactoring a method if it goes over 24 lines.
+
+More code is harder to track, and not immediately comprehensible. It doesn't fit in your short term memory.
+
+> No more than seven things should be going in a single piece of code.
+
+## Cohesion
+
+> Things that change at the same rate belong together. Things that change at different rates belong apart.
+
+Chunks of code can shifted and replaced with a reference to the chunk. This replaces many things with one thing. This is possible if you can _abstract_ the _essence_ of the code chunk.
+
+> Abstraction is the elimination of the irrelevant and the amplification of the essential.
+> - Robert C. Martin
+
+## Feature Envy
+
+In object-orientated design pay attention to static methods. Feature envy is a code smell. Try moving the method to the object it seems 'envious' of.
+
+A property in C# is syntactic sugar for a 'getter'/'setter' method.
+
