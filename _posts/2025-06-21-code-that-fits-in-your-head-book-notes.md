@@ -151,8 +151,6 @@ More code is harder to track, and not immediately comprehensible. It doesn't fit
 
 > No more than seven things should be going in a single piece of code.
 
-## Cohesion
-
 > Things that change at the same rate belong together. Things that change at different rates belong apart.
 
 Chunks of code can shifted and replaced with a reference to the chunk. This replaces many things with one thing. This is possible if you can _abstract_ the _essence_ of the code chunk.
@@ -160,9 +158,25 @@ Chunks of code can shifted and replaced with a reference to the chunk. This repl
 > Abstraction is the elimination of the irrelevant and the amplification of the essential.
 > - Robert C. Martin
 
-## Feature Envy
-
 In object-orientated design pay attention to static methods. Feature envy is a code smell. Try moving the method to the object it seems 'envious' of.
 
 A property in C# is syntactic sugar for a 'getter'/'setter' method.
+
+Domain models provide encapsulation. It protects its invariants (conditions about the system that are true for some state of the system), including pre and postconditions. A properly initialised object is guaranteed to be in a valid state.
+
+Convert (or project) DTOs to domain objects early. This validates the data and gives a stronger representation. It also reduces data validation code (DRY). This is known as _parse, don't validate_.
+
+Guard clauses - statements that check the provided values meet the preconditions.
+
+> **Maybe**
+> If the _essence_ of a method can be captured in its signature, then that's a good abstraction.
+> Certain languages have a `Maybe` type (or `Option`), which can be recreated in C#, eg: `Maybe<MyType>`.
+> This indicates that the object to return may or may not have been created, and it is on the caller to check.
+> C#'s nullable references types effectively provide this capability.
+
+A parser is just a function that consumes less-structured input and produces more-structured output. A parser needs a notion of failure, there will be provided values that fall outside the range of the domain.
+
+_Fractal architecture_, at all levels of abstraction the code should fit in your brain. At a given level the goal is to keep complexity low, such as keeping cyclomatic complexity to seven for fewer. At the greatest depth will be methods that don't call any other user code. A fractal architecture is a way to organise code. Lower-lvel details should be represented as a single abstract chunk, while higher level details are either irrelevant at that level, or explicitly visible as method parameters or injected dependencies.
+
+Another possible measure of complexity is variable count. Keep the number of variables (local variables, parameters, used properties) to seven or fewer.
 
