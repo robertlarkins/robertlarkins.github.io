@@ -180,3 +180,4 @@ _Fractal architecture_, at all levels of abstraction the code should fit in your
 
 Another possible measure of complexity is variable count. Keep the number of variables (local variables, parameters, used properties) to seven or fewer.
 
+Code that is easier to comprhend is more likely to be changed than code that is harder to comprehend. You must actively prevent code from rotting. There are different measures of complexity, that give awareness to code rot, but you must use your own judgement.
