@@ -181,3 +181,21 @@ _Fractal architecture_, at all levels of abstraction the code should fit in your
 Another possible measure of complexity is variable count. Keep the number of variables (local variables, parameters, used properties) to seven or fewer.
 
 Code that is easier to comprhend is more likely to be changed than code that is harder to comprehend. You must actively prevent code from rotting. There are different measures of complexity, that give awareness to code rot, but you must use your own judgement.
+
+
+# Chapter 8 - API Design
+
+Complex code should be decomposed.
+API = Application Programming Interface
+Interface is an *affordance* - it *affords* the ability to do something. The set of methods, values, functions, and objects you have at your disposal. An API allows you to interact with an encapsulate package of code, which preserves its invariants.
+
+An API only affords its capabilities to client code the fulfils the required preconditions.
+
+Don't design a Swiss Army knife, an API with many capabilities in one once may become a God class, which is an antipattern.
+
+Design APIs so they're difficult to misuse. Mistake proof artefacts and processes. Active mistake-proofing inspects artefacts when written, such as done by TDD.
+Passive mistake-proofing make illegal states unrepresentable, such as impossible cases being compile time errors.
+
+Code is read more than written - write code for future readers.
+
+Favour well-named code over comments - comments may deteriorate as the code evolves, and eventually become misleading. The code (that gets compiled) is only artefact you can trust. Can a comments be replaced with a well named variable or method? Names can grow stale as the behavoiur changes as well. Can the input parameters and return type of a method convey its purpose (along with the class or interface that is in) without knowing the name? Using the context of the object and only a few methods and particular types, they methods can convey information without the name. The name then doesn't need to repeat what the rest of the signature conveys, but can provide other info to the reader.
