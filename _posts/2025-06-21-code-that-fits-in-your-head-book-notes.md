@@ -199,3 +199,26 @@ Passive mistake-proofing make illegal states unrepresentable, such as impossible
 Code is read more than written - write code for future readers.
 
 Favour well-named code over comments - comments may deteriorate as the code evolves, and eventually become misleading. The code (that gets compiled) is only artefact you can trust. Can a comments be replaced with a well named variable or method? Names can grow stale as the behavoiur changes as well. Can the input parameters and return type of a method convey its purpose (along with the class or interface that is in) without knowing the name? Using the context of the object and only a few methods and particular types, they methods can convey information without the name. The name then doesn't need to repeat what the rest of the signature conveys, but can provide other info to the reader.
+
+The purpose of encapsulation is to hide implementation details.
+
+Command Query Separation (CQS)
+- Commands - Methods with side-effects that should return no data. Their return type should be `void`.
+- Queries - Methods with no side-effects, that should return data. They have a return type.
+Favour Queries over commands, as queries are easier to reason about.
+
+*How to solve adding a row to a database and return the generated ID using CQS*
+
+> Don't say anything with a comment that you can say with a method (or variable) name.
+> Don't say anything with a method name you can say with a type.
+
+Guide the reader by:
+1. Giving APIs distinct types - these are part of the compilation process
+2. Giving methods helpful names - part of the compiled code, but don't cause compilation errors
+3. Writing good comments - kept with the code
+4. Providing illustrative examples as automated tests
+5. Writing helpful commit messages in Git - information about the committed change (such as why)
+6. Writing good documentation - Higher level information
+Everything from 2 down can easily stagnate.
+
+
