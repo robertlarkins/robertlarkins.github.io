@@ -6,6 +6,9 @@ categories: ['jekyll']
 tags: ['Book Notes']
 ---
 
+Sample code can be found here (but requires registering the book): https://www.informit.com/store/code-that-fits-in-your-head-heuristics-for-software-9780137464401
+
+
 # Chapter 2
 
 Checklists
@@ -221,4 +224,9 @@ Guide the reader by:
 6. Writing good documentation - Higher level information
 Everything from 2 down can easily stagnate.
 
+Write code for readers.
 
+> *Any fool can write codde that a computer can understand. Good programmers write code that humans can understand.*
+> - Martin Fowler
+
+Encapsulation is important for making code that humans can understand. Encapsulation hides implementation details, which should sat irrelevant until you need to change them.
