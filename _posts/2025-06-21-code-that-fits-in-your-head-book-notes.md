@@ -230,3 +230,48 @@ Write code for readers.
 > - Martin Fowler
 
 Encapsulation is important for making code that humans can understand. Encapsulation hides implementation details, which should sat irrelevant until you need to change them.
+
+
+# Chapter 9 - Team Work
+
+Understand the motivation for processes and that their outcome is what matters. Both in the short and long term.
+
+## GIT
+
+Use GIT tactically
+
+
+### Commit Messages
+
+These messages persist for you and future readers.
+
+> Focus on *communication* over writing.
+
+Git commit messages have a de-facto standard - the 50/72 rule - based on how various Git features work.
+```
+Summary in the imperative mood 50 characters or less
+
+Extra information no longer than 72 charactres per line.
+Write proper prose, that is, use proper spelling and grammar to improve
+readability. It also aids in discoverability by having consistent
+spelling.
+```
+
+The diff contains *what changed*, the commit message is often the best place to explain *why* the change was made.
+The rationale behind code is a high-ranked problem in software engineering.
+
+
+## Continuous Integration
+
+Continuous Integration is a *practice*. The code you work on and the code of your colleagues is continually integrated (merged) with the trunk branch.
+Continuous here isn't literal, it means frequently, such as every few hours.
+
+By continuously integrating, the risk of having merge conflicts decreases, other wise merge hell can occur.
+
+
+## Small Commits
+
+Git allows for *manoeuvrability*, or code experimentation. Make a change, if it works commit it. If not, reset. Make micro-commits. Once the code change is in a good state tidy up the branch. This is done by squashing or rebasing commits to better group changes together (eg: keeping tests with the logic they test) with a good commit message. This forms a more coherent commit history. Then form a Pull Request.
+
+The commit history should be a series of snapshots of *working* software. Do not commit code that doesn't work.
+
