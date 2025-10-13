@@ -275,3 +275,44 @@ Git allows for *manoeuvrability*, or code experimentation. Make a change, if it 
 
 The commit history should be a series of snapshots of *working* software. Do not commit code that doesn't work.
 
+
+## Collective Code Ownership
+
+Bus Factor - How many people can be 'hit by a bus' before development halts? Circumstances change, no single person should be indespensible.
+
+*Does the team contain more than one person comfortable working with a particular piece of code?* The team must continually answer this as: yes.
+
+Two active maintainers should approve code base changes (pair programming or code reviews).
+
+Pair programming - two developers collaborating inreal time on the same problem. Helps avoid knowledge silos, especially by pair rotation. There are benefits, though independent coding at times may work better for individuals.
+
+Mob programming - Three or more people programming together. There is a point of diminishing returns. Mob programming is great for knowledge transfer.
+
+Code reviews help detect problems before code is deployed to production. Deployed defects can lead to unplanned work and firefighting, causing more time involvement (*shifting left* helps catch issues earlier). Code reviews should occcur quickly once a Pull Request has been formed. Changes should be small, less than half a days work, making it easier to review, more likely to be reviewed, give more specific feedback and detect defects. This all helps provide feedback and learning to the code submitter. Larger PRs take longer to review as there is more back and forth.
+
+When performing a code review, saying *no* should be a real option. Eg: when a PR is too big and should be broken into smaller PRs. A code review is worthless if it is just rubber stamping. Do not give up and accept big PRs, reject them and request smaller PRs. This is known as *sunk cost fallacy*, while time has been spent on the PR, if not reviewed properly even more time could be spent in the future fixing or maintaining poor design.
+
+A code review that takes more than an hour is not effective.
+
+The fundamental question of a code review is: *Will I be okay maintaining this*.
+(another valid and secondary question is *Does the change address a valid concern*).
+
+The most important criterion in a code review is: is the code readable - does it fit in your brain. Can you trust the code? Ultimately it is the only artefact that matters.
+
+The author should never guide the code review. The reviewer needs to be judge the code on its own merits. The author may cause the reviewer to overlook problematic practices.
+
+The review should conduct the review at their own pace (without the author). The author isn't in a position to say whether code is readable by others.
+
+Nitpicking should be minimal, does the code fit in your brain (eg: are methods too long or complex)? Can review aspects be automated with linters?
+
+Non-exhaustive list of things to look for:
+- Does the code work as intended?
+- Is the intent clear?
+- Is there needless duplication?
+- Could existing code have solved this?
+- Are the tests comprehensive and clear?
+
+There will often be suggestions the review provides that ellicit dialogue, with improvements aggreed upon. This is an iterative process that will reach consensus and the changes integrated.
+
+Everybody should be authors and reviewers.
+
