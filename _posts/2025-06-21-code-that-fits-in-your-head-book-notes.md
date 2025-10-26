@@ -316,3 +316,16 @@ There will often be suggestions the review provides that ellicit dialogue, with 
 
 Everybody should be authors and reviewers.
 
+Pull Requests (PR) - Somebody else review and approve the code before merging into main.
+
+For PRs do the following and review for the following:
+- Make the pull request as small as possible
+- Atomic PRs. One thing per PR only.
+  - Avoid reformatting - that should be its own PR
+- Code builds
+- All tests pass
+- New behaviour includes the tests
+- Write proper commit messages
+
+When reviewing be extra polite in the way comments are written as tone and intent can be lost. Use [comment conventions](https://conventionalcomments.org/) and emojis to help. As a review do a proper review, and decline if too big to review rather than simply approving. Work with the author, offer alternatives, give praise, run the code on your machine.
+
