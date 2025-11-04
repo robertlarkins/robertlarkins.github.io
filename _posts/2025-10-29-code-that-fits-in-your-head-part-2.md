@@ -29,4 +29,29 @@ Deleting code is satisfying as there is less code to maintain.
 
 **The Strangler Pattern**
 
+Adding a new feature is often done by appending new code to the existing code base.
 
+Heroism - This is not an engineering practice. It is too unpredicatble, and can stimuate sunk cost fallacies. Avoid.
+
+> for each desired change, make the change easy (warning: this may be hard), then make the easy change.
+> - Kent Beck
+
+For any significant change, don't make it in-place; make it side-by-side
+
+The stranger pattern (named after the strangler fig vine) is adding new code (either a method or class), shifting callers over, then deleting the old replaced code.
+
+Maintenance Tax - When more code is added there is more code to maintain
+
+When deleting a method from an interface, remember to remove it from the implementing classes. The compiler wont complain, but they will be a maintenance burden.
+
+
+**Versioning**
+
+Semantic Versioning _major.minor.patch_
+
+The following is when to increment each value:
+- _major_ - breaking change
+- _minor_ - new feature
+- _patch_ - bug fix
+
+Versioning helps you think about the impact your changes have on other code that depends on your code, and how it should be conveyed to your callers. It is better to give advanced warning - such as using the `[Obsolete]` attribute, then after some time removing the code as a major change.
