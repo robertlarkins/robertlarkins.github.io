@@ -55,3 +55,8 @@ The following is when to increment each value:
 - _patch_ - bug fix
 
 Versioning helps you think about the impact your changes have on other code that depends on your code, and how it should be conveyed to your callers. It is better to give advanced warning - such as using the `[Obsolete]` attribute, then after some time removing the code as a major change.
+
+
+# Chapter 11 - Editing Unit Tests
+
+
