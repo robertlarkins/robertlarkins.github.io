@@ -59,4 +59,11 @@ Versioning helps you think about the impact your changes have on other code that
 
 # Chapter 11 - Editing Unit Tests
 
+How do you know your test suite is mistake free? You don't, but production code gives feedback about the tests.
+Modify existing tests carefully, as tests don't have their own tests (though mutation testing helps with this). The more they are modified the more likely mistakes are introduced.
 
+Adding new test classes, tests, Theory cases and assertions are fairly safe. Using IDE refactorings also generaly safe. Deleting tests or assertions can weaken the guarantees of the system - possibly allowing regression bugs and breaking changes to occur.
+
+Refactor test and production code separately (if possible), and check into Git as separate commits. As test and production code are coupled, introducing a defect is more likely to have a test alert on it. Though this does depend on there being test cases that expose the defect.
+
+Nevver trust a test you haven't seen fail. Follow Red, Green, Refactor, or temporarily modify production code to confirm the test fails.
