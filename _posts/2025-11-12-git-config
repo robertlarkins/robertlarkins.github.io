@@ -1,0 +1,18 @@
+---
+layout: post
+title: "My Preferred Git Config"
+date: 2025-11-12
+categories: ['git']
+tags: ['local']
+---
+
+How to edit git's global config:
+
+``` PowerShell
+git config --global --edit
+```
+
+Update references of chained brances
+```PowerShell
+git config --global rebase.updateRefs true
+```
