@@ -94,7 +94,16 @@ You can draw a blank on a problem while trying to understand it. Try the followi
 
 The ideal number of defects is zero.
 
-In softawre development, _later_ is _never_. When a defect occurs, make it a priority to address it. Stop what you're doing and fix the defect.
+In software development, _later_ is _never_. When a defect occurs, make it a priority to address it. Stop what you're doing and fix the defect.
 
+Once the problem has potentially been identified, recreate it as a test. This is an experiment, the hypothesis is the test will fail. If it doees fail, then this test reproduces the defect and can serve as a regression test. Otherwise, revise and design a new experiment. Then fix the code to make the test pass.
 
+When examining code and logs, slow down. Spend a moment to think through and understand what a field should be, the code should do, or what the log is saying. Is what is being said or set match your expectations?
 
+Slows tests (integration tests) should be run as part of your deployment pipeline. They can also be created to try and recreate non-deterministic defects.
+
+Bisection - detect (eg: an automated test) or reproduce a problem by repeatedly removing half the code until the code that produces the problem is small enough to understand what is going on. Producing a minimal working example of a problem is a super power as it can be illuminating in understanding the cause.
+
+GIT Bisect - Git feature to do a binary search through commits to identify the one that introduces a defect.
+
+Learn and use the above technique. Using a debugger has its place, but a debugger can't be used everywhere (eg: production).
