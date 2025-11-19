@@ -67,3 +67,34 @@ Adding new test classes, tests, Theory cases and assertions are fairly safe. Usi
 Refactor test and production code separately (if possible), and check into Git as separate commits. As test and production code are coupled, introducing a defect is more likely to have a test alert on it. Though this does depend on there being test cases that expose the defect.
 
 Nevver trust a test you haven't seen fail. Follow Red, Green, Refactor, or temporarily modify production code to confirm the test fails.
+
+
+# Chapter 12 - Troubleshooting
+
+Troubleshooting skills are often based on "the shifting sands of individual experience", but there are techniques that can be applied.
+
+Best advice: Try to understand what is going on.
+
+Make understanding a priority. This should be the first reaction to a problem. If you have absolutely no idea, ask for help. Though if you have an inclination, follow a scientific method:
+1. Make a prediction (hypothesis)
+2. Perform the experiment
+3. Compare outcome to prediction
+4. Repeat till you have understanding
+
+Simplify - consider if removing (simplifying) code will make a problem go away. It could be an implementation error.
+
+Keeping things simple reduces or removes other problems that can occur. Though coming up with a simpler solution is _hard_.
+
+https://www.infoq.com/presentations/Simple-Made-Easy/
+
+You can draw a blank on a problem while trying to understand it. Try the following:
+- Time-box the process (eg: 25 min), if no progress is made then take a break by leaving the computer and do something else (eg: for 5min).
+- Try asking for help. Explain the problem tends to produce new insights
+- If you have no colleague, try explaining to a 'rubber duck' (known as rubber ducking)
+
+The ideal number of defects is zero.
+
+In softawre development, _later_ is _never_. When a defect occurs, make it a priority to address it. Stop what you're doing and fix the defect.
+
+
+
