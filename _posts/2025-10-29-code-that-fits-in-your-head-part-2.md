@@ -107,3 +107,30 @@ Bisection - detect (eg: an automated test) or reproduce a problem by repeatedly 
 GIT Bisect - Git feature to do a binary search through commits to identify the one that introduces a defect.
 
 Learn and use the above technique. Using a debugger has its place, but a debugger can't be used everywhere (eg: production).
+
+
+# Chapter 13 - Separation of Concerns
+
+> Things that change at the same rate belong together. Things that change at different rates belong apart.
+> - Kent Beck
+
+Decomposition is intimately related to Composition. Decompose so that you can compose working software from the resulting parts.
+
+Nested Composition - Software interacts with the real world (paints pixels on the screen, sends emails, saves data in the DB, etc). In the context of Command Query Separation (CQS), these *actions* are *side effects*. Composing these side effects into models results in side effects being nested inside other side effects. This violates CQS and makes it difficult to fit in your head what the code is doing.
+
+> Abstraction is the elimination of the irrelevant and the amplification of the essential
+> - Robert C. Martin
+
+By hiding side effects in Queries, something essential (the side effect) is eliminated (hidden and more difficult to follow what the code is doing).
+
+A constructor should be a 'Query' (in the context of CQS) as it *should not* have any side effects.
+
+Sequential Composition - Can be performed as a series of Queries. Once the result is determined then the side effect action can be performed. But not as part of these queries. This eliminates the irrelevant and amplifies the essential.
+
+Referential Transparency - Queries must be deterministic. That must not rely on anything random, eg: guid creation, random number generators, time of day, or any other data from the environment. A deterministic method without side effects is *referentially transparent*. It is also a *pure function*. Pure functions can always be sequentially composed. With respect to abstraction the result is what matters, how the function arrived at the result is an implementation detail.
+Zooming in on a pure function, it can be assessed in isolation - the surrounding context is irrelevant - it operates exclusively on its inputs and immutable class fields.
+
+Where does the non-deterministic behaviour and side effects go? Push these to the edge of the system: Controllers, message handlers, etc.
+This style of programming is known as *functional core, imperative shell*.
+
+There is a recommendation to learn a functional programming language (eg: F#).
