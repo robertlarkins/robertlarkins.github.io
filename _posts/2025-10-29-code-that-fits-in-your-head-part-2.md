@@ -114,7 +114,7 @@ Learn and use the above technique. Using a debugger has its place, but a debugge
 > Things that change at the same rate belong together. Things that change at different rates belong apart.
 > - Kent Beck
 
-Decomposition is intimately related to Composition. Decompose so that you can compose working software from the resulting parts.
+Decomposition is intimately related to Composition. Decompose so that you can compose working software from the resulting parts. Decomposition is only valuable if you can recompose the disparate parts.
 
 Nested Composition - Software interacts with the real world (paints pixels on the screen, sends emails, saves data in the DB, etc). In the context of Command Query Separation (CQS), these *actions* are *side effects*. Composing these side effects into models results in side effects being nested inside other side effects. This violates CQS and makes it difficult to fit in your head what the code is doing.
 
@@ -134,3 +134,13 @@ Where does the non-deterministic behaviour and side effects go? Push these to th
 This style of programming is known as *functional core, imperative shell*.
 
 There is a recommendation to learn a functional programming language (eg: F#).
+
+Cross-Cutting Concerns - These are concerns that tend to cut across multiple disparate features, eg: Logging, Performance monitoring, auditing, etc. Logging should be added as a minimum to give insights into the running system.
+
+Cross-cutting concerns tend to be best implemented using the Decorator design pattern (Refer to the book for a worked example). This pattern works well for most cross-cutting concerns, such as sending emails, or read from and writing to a cache. Security concerns can be addressed using this pattern, but most frameworks have built in security features, it is better to use those.
+
+What to log - Only log what you need. Log what data is needed to just reproduce execution. This allows you to replay what happened when a problem manifests, and troubleshoot it.
+
+> Log all impure actions, but no more.
+
+Log everything you can't reproduce. This includes all nondeterministic code (eg: current date) and anything that has side effects.
