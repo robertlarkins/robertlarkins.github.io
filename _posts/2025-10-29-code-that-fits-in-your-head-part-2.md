@@ -163,3 +163,13 @@ Use your time deliberately. Spend dedicated time educating yourself - keep learn
 Minimise the amount of meetings you attend. Meetings needs to have an agenda. Capture information that can be shared with others, if the meeting is a requst for information, then just point them to the already written information. Meetings don't scale, documentation does.
 
 Touch Type - learn how to if you don't already do it. While you'll be able to type faster, it allows you to keep your attention on the screen, allowing mistakes to be picked up faster, or pick up suggestions from the IDE.
+
+Regularly update dependencies - it can be dangerous to fall too far behind. Breaking changes will pile up. Frequency depends on the number of packages and how frequently they change, but update at least once a month. Tools like RenovateBot or DependencyBot will help automate this.
+
+Other uncommon activities should be scheduled: certificates, domain names, database backups, etc. Perform as a regular exercise so that people know the process works and how to do it.
+
+Face-to-face communication fosters cooperation - it often resolves issues much faster than written discussion. However, if communication is only oral, and nothing is written down, discussions repeat or knowledge is lost when people move on.
+
+Conway's Law - _Any organisation that designs a system [...] will inevitably produce a design whose structure is a copy of the organisation's communication structure._
+
+The way people communicate and organise work will impact the code base. Organise your team in a way that fosters both communication and the software architecture you prefer. Team organisation and architecture are connected.
