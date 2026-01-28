@@ -144,3 +144,22 @@ What to log - Only log what you need. Log what data is needed to just reproduce 
 > Log all impure actions, but no more.
 
 Log everything you can't reproduce. This includes all nondeterministic code (eg: current date) and anything that has side effects.
+
+
+# Chapter 14 - Rhythm
+
+A loose rhythm or structure to the day, with the ability to continuously deploy can be beneficial for a team to move fast.
+
+Have a loose structure to your day, as structure can help you get things done.
+
+Time-boxing, work for 25min, take 5min break (like Pomodoro, but less involved). 25min of interrupted work helps make big tasks seem more manageable - the hardest part of most tasks is getting started, saying I'll look at it for 25min can make it less daunting. 
+Use a visible timer, to know when your next break is. This will help counter the 'just' check Slack or emails.
+
+For the 5min break, make it a proper break. Get out of your chair, walk around, leave the room, get away from the computer. This has physical health benefits, but also gives you a chance to reflect on the work you're doing, which may help. Good ideas often come when doing something else - the alternation between being in front of the computer and elsewhere seems to be the trick.
+
+Also take longer breaks, for the same benefits. Also, working longer hours may lead to negative productivity, as mistakes can occur that have to be fixed.
+
+Use your time deliberately. Spend dedicated time educating yourself - keep learning. You also learn a lot by teaching. Programming katas are another option.
+Minimise the amount of meetings you attend. Meetings needs to have an agenda. Capture information that can be shared with others, if the meeting is a requst for information, then just point them to the already written information. Meetings don't scale, documentation does.
+
+Touch Type - learn how to if you don't already do it. While you'll be able to type faster, it allows you to keep your attention on the screen, allowing mistakes to be picked up faster, or pick up suggestions from the IDE.
