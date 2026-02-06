@@ -198,7 +198,7 @@ public int[,] MatrixMultiply(int[,] A, int[,] B)
 ```
 
 
-## Direct Formula - O(1)
+## Direct Formula
 
 Time Complexity: **O(1)** \
 Space Complexity: **O(1)**
