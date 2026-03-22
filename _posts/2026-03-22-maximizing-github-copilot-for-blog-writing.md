@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Maximizing GitHub Copilot for Writing Blog Posts"
-date: 2026-03-22 10:00:00 -0500
+date: 2026-03-22
 categories: productivity ai tools
 ---
 
@@ -14,7 +14,11 @@ GitHub Copilot has revolutionized the way developers approach writing and coding
 Start by using Copilot to help you organize your thoughts. Type a rough outline or topic sentence, and let Copilot suggest a structured post outline. This accelerates the planning phase and ensures your post flows logically from introduction to conclusion.
 
 **Tip:** Begin with a comment describing your post's goal:
-```\n// Blog post about setting up Docker containers for beginners\n// Target audience: Junior developers\n// Key points to cover: Installation, basic concepts, running first container\n```
+```
+// Blog post about setting up Docker containers for beginners
+// Target audience: Junior developers
+// Key points to cover: Installation, basic concepts, running first container
+```
 
 Copilot will often suggest relevant section headings and content structure.
 
