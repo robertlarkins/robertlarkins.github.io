@@ -173,3 +173,18 @@ Face-to-face communication fosters cooperation - it often resolves issues much f
 Conway's Law - _Any organisation that designs a system [...] will inevitably produce a design whose structure is a copy of the organisation's communication structure._
 
 The way people communicate and organise work will impact the code base. Organise your team in a way that fosters both communication and the software architecture you prefer. Team organisation and architecture are connected.
+
+
+# Chapter 15 - The Usual Suspects
+
+**Performance** - Modern computers are fast. Performance should never be the primary centre of attention; correctness should. If you must focus on performance, at least optimise the bottlenecks. Make it work first, and then you can think about performance. Maybe. Perhaps security is also more important. Perhaps you should ask other stakeholders how to prioritise. And if it turns out that stakeholders prioritise performance, measure!
+
+**Security** - Use STRIDE as a way to help think of relelvant threats to your system:
+- Spoofing - Attackers try to pose as someone they’re not in order to gain unauthorised access to the system.
+- Tampering - Attackers try to tamper with data, for example through SQL injection.
+- Repudiation - Attackers deny that they’ve performed an action, such as receiving an item they’ve paid for.
+- Information disclosure - Attackers can read data they shouldn’t be able to read. Examples include man-in-the-middle attacks and SQL injection.
+- Denial of service - Attackers attempt to make the system unavailable to its regular users.
+- Elevation of privilege - Attackers attempt to gain more permissions than they have.
+
+At page 300 - other Techniques
