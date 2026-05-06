@@ -187,4 +187,6 @@ The way people communicate and organise work will impact the code base. Organise
 - Denial of service - Attackers attempt to make the system unavailable to its regular users.
 - Elevation of privilege - Attackers attempt to gain more permissions than they have.
 
-At page 300 - other Techniques
+There are many other techniques and practices in software engineering, such as: canary releases and A/B testing, fault tolerance and resiliency, dependency analysis, leadership, distributed systems algorithms, architecture, finite state machines, design patterns, Continuous Delivery, the SOLID principles, etc.
+
+Two other areas mentioned are **Property Based Testing** and **Behavioural Code Analysis** - Behavioural code analysis extracts information from Git to identify patterns and problems that may only be visible over time. It can also be integrated into CI/CD pipeline.
